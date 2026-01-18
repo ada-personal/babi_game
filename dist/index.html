@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Quicksand:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-DuKYEx0a.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BOyBbg3D.css">
+</head>
+
+<body>
+  <!-- 3D Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- UI Overlay -->
+  <div id="ui-layer">
+
+    <!-- Intro / Guide Screen -->
+    <div id="intro-screen" class="screen active">
+      <div class="glass-panel intro-panel">
+        <div class="guide-container">
+          <img src="/assets/guide-BFGJVjgv.png" alt="Guide" class="guide-image" />
+        </div>
+        <div class="intro-content">
+          <h1>Welcome to Our Universe, Tom</h1>
+          <p>Every star here is a memory, a feeling, a reason why I love you.</p>
+          <p>Click on the stars to discover them.</p>
+          <button id="start-btn" class="ethereal-btn">Enter the Cosmos</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup / Message Screen -->
+    <div id="message-popup" class="popup hidden">
+      <div class="glass-panel message-panel">
+        <button id="close-popup" class="close-btn">&times;</button>
+        <h2 id="popup-title">A Star Whispers...</h2>
+        <p id="popup-content">You are my everything.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
