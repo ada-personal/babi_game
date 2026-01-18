@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Universe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Quicksand:wght@300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- 3D Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- Background Music -->
+  <audio id="bgm" loop>
+    <source src="/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- UI Overlay -->
+  <div id="ui-layer">
+
+    <!-- Intro / Guide Screen -->
+    <div id="intro-screen" class="screen active">
+      <div class="glass-panel intro-panel">
+        <div class="guide-container">
+          <img src="/public/guide.png" alt="Guide" class="guide-image" />
+        </div>
+        <div class="intro-content">
+          <h1>Welcome to Our Universe, Tom</h1>
+          <p>Every star here is a memory, a feeling, a reason why I love you.</p>
+          <p>Click on the stars to discover them.</p>
+          <button id="start-btn" class="ethereal-btn">Enter the Cosmos</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup / Message Screen -->
+    <div id="message-popup" class="popup hidden">
+      <div class="glass-panel message-panel">
+        <button id="close-popup" class="close-btn">&times;</button>
+        <h2 id="popup-title">A Star Whispers...</h2>
+        <p id="popup-content">You are my everything.</p>
+      </div>
+    </div>
+
+    <!-- Flower Field UI (Beach Mood) -->
+    <div id="flower-ui" class="popup hidden"
+      style="pointer-events: none; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h1 id="valentine-text" class="valentine-title">Will you be my Valentine?</h1>
+      <div class="valentine-buttons" style="pointer-events: auto; margin-top: 2rem; display: flex; gap: 2rem;">
+        <button id="btn-yes" class="ethereal-btn glow-green">YES</button>
+        <button id="btn-no" class="ethereal-btn glow-red">NO</button>
+      </div>
+      <button id="back-to-space" class="ethereal-btn"
+        style="pointer-events: auto; margin-top: 2rem; opacity: 0.5; font-size: 0.8rem;">Return to
+        Orbit</button>
+    </div>
+
+    <!-- Fake 404 Screen -->
+    <div id="error-screen" class="error-screen hidden">
+      <h1>404</h1>
+      <h2>HEART NOT FOUND</h2>
+      <p>Fatal Error: Life without you is undefined.</p>
+      <button id="try-again-btn" class="error-btn">TRY AGAIN</button>
+    </div>
+
+    <!-- Moon Scene UI -->
+    <div id="moon-ui" class="popup hidden">
+      <div class="moon-message">
+        <h1>Thank You</h1>
+        <p>You mean the world to me.</p>
+        <p class="instruction">(Use WASD to Walk, Mouse to Look)</p>
+      </div>
+    </div>
+
+    <!-- Glitch Screen -->
+    <div id="glitch-screen" class="screen hidden" style="background: black; z-index: 2000;">
+      <img src="/public/hunhow.png" alt="Glitch"
+        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; mix-blend-mode: color-dodge;">
+      <div class="glitch-text"
+        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: red; font-family: monospace; font-size: 5rem; font-weight: bold; text-shadow: 5px 0 red, -5px 0 blue;">
+        FATAL ERROR</div>
+    </div>
+
+    <!-- Sun Finale UI -->
+    <div id="sun-ui" class="popup hidden">
+      <div class="sun-message">
+        <h1>You are my Sun</h1>
+        <p>You light up my darkest days.</p>
+        <p>I love you.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
